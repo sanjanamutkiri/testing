@@ -1,0 +1,17 @@
+{
+    "name": "user/offer_letter_generation_portal",
+    "autoload": {
+        "psr-4": {
+            "User\\OfferLetterGenerationPortal\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Stud-KK",
+            "email": "komalkalshetti989@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
