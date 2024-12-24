@@ -26,7 +26,13 @@ if ($result->num_rows > 0) {
     // Check if the PDF certificate exists
     if (file_exists($pdfPath)) {
         // Send the certificate via email
-        $status = sendEmailWithAttachment($row['email_id'], "Your Certificate", "Dear {$row['name']},<br><br>Attached is your certificate in PDF format.<br><br>Best regards,<br>Team", $pdfPath);
+        $status = sendEmailWithAttachment($row['email_id'], "Suvidha Offer Letter", "Greetings of the day!<br><br>
+        Congratulations! We are pleased to offer you the opportunity to join Suvidha Foundation as an intern. 
+        Please find attached the detailed offer letter for your reference.<br><br>
+        To formally accept this offer, kindly review the attached document and return a physically or digitally signed copy of the Offer Letter within 48 hours.<br><br>
+        Upon successful completion of your internship, you will receive a Certificate of Completion. Based on your performance during the internship, you may also be awarded a Letter of Recommendation.<br><br>
+        We are thrilled to welcome you to our team and look forward to working with you. If you have any questions or need further clarification, please feel free to contact us.<br><br>
+        Best regards,<br>Suvidha Foundation Team", $pdfPath);
 
         // Display email status
         echo $status;
@@ -41,15 +47,6 @@ if ($result->num_rows > 0) {
 $stmt->close();
 $conn->close();
 
-/**
- * Function to send email with the certificate attached
- *
- * @param string $to Recipient's email address
- * @param string $subject Subject of the email
- * @param string $msg Body of the email
- * @param string $attachmentPath Path to the attachment file
- * @return string Status message
- */
 function sendEmailWithAttachment($to, $subject, $msg, $attachmentPath) {
     $mail = new PHPMailer(true);
 
@@ -80,3 +77,4 @@ function sendEmailWithAttachment($to, $subject, $msg, $attachmentPath) {
         return "Error sending email: " . $mail->ErrorInfo;
     }
 }
+?>
