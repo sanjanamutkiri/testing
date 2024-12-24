@@ -118,8 +118,7 @@ All generated certificates are stored in the `generated_certificates` directory.
 - Integrate advanced email templates.
 - Add analytics for tracking sent certificates.
 
-## License
-This project is licensed under the [MIT License](LICENSE).
+
 
 ## Authors
 
